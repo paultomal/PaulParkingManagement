@@ -74,6 +74,11 @@
     <Compile Include="Repos\CustomerRepos\ReservationRepo.cs" />
     <Compile Include="Repos\CustomerRepos\ReviewRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
+    <Compile Include="Repos\ServiceProviderRepos\ParkingSpotRepos.cs" />
+    <Compile Include="Repos\ServiceProviderRepos\PaymentRepos.cs" />
+    <Compile Include="Repos\ServiceProviderRepos\ReservationRepos.cs" />
+    <Compile Include="Repos\ServiceProviderRepos\ReviewRepos.cs" />
+    <Compile Include="Repos\ServiceProviderRepos\ServiceProviderRepos.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -81,7 +86,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repos\AdminRepos\" />
-    <Folder Include="Repos\ServiceProviderRepos\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202305011039392_PaulParkingManagement.resx">
