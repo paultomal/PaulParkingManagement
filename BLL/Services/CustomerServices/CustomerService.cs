@@ -56,7 +56,7 @@ namespace BLL.Services.CustomerServices
             var mapped = mapper.Map<CustomerDTO>(data);
             return mapped;
         }
-        public static bool DeleteSpot(string id)
+        public static bool DeleteCustomer(string id)
         {
             var res = DataAccessFactory.CustomerData().Delete(id);
             return res;
