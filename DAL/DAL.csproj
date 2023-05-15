@@ -59,6 +59,14 @@
     <Compile Include="Migrations\202305011039392_PaulParkingManagement.designer.cs">
       <DependentUpon>202305011039392_PaulParkingManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202305141651086_Token.cs" />
+    <Compile Include="Migrations\202305141651086_Token.designer.cs">
+      <DependentUpon>202305141651086_Token.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305142218383_TokenDB.cs" />
+    <Compile Include="Migrations\202305142218383_TokenDB.designer.cs">
+      <DependentUpon>202305142218383_TokenDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -67,6 +75,7 @@
     <Compile Include="Models\Reservation.cs" />
     <Compile Include="Models\Review.cs" />
     <Compile Include="Models\ServiceProvider.cs" />
+    <Compile Include="Models\Token.cs" />
     <Compile Include="PPMContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\CustomerRepos\CustomerRepo.cs" />
@@ -79,6 +88,7 @@
     <Compile Include="Repos\ServiceProviderRepos\ReservationRepos.cs" />
     <Compile Include="Repos\ServiceProviderRepos\ReviewRepos.cs" />
     <Compile Include="Repos\ServiceProviderRepos\ServiceProviderRepos.cs" />
+    <Compile Include="Repos\TokenRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -90,6 +100,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202305011039392_PaulParkingManagement.resx">
       <DependentUpon>202305011039392_PaulParkingManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305141651086_Token.resx">
+      <DependentUpon>202305141651086_Token.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305142218383_TokenDB.resx">
+      <DependentUpon>202305142218383_TokenDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

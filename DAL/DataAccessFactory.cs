@@ -1,5 +1,6 @@
 ﻿using DAL.Interfaces;
 using DAL.Models;
+using DAL.Repos;
 using DAL.Repos.CustomerRepos;
 using DAL.Repos.ServiceProviderRepos;
 using System;
@@ -50,6 +51,14 @@ namespace DAL
         {
             return new PaymentRepos();
         }
-
+        public static IRepo<Token, string, Token> TokenData()
+        {
+            return new TokenRepo();
+        }
+        public static IAuth<bool> AuthData()
+        {
+            return new CustomerRepo();
+        }
+       
     }
 }

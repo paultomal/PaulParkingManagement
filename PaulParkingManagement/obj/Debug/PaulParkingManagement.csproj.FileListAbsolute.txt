@@ -127,7 +127,6 @@ D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\Paul
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\bin\roslyn\VBCSCompiler.exe
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\bin\roslyn\VBCSCompiler.exe.config
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\bin\BLL.dll
-D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\bin\DAL.dll
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\bin\EntityFramework.dll
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\bin\EntityFramework.SqlServer.dll
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
@@ -135,9 +134,9 @@ D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\Paul
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\bin\System.Net.Http.Formatting.dll
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\bin\System.Web.Http.dll
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\bin\System.Web.Http.WebHost.dll
+D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\bin\DAL.dll
+D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\bin\AutoMapper.dll
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\bin\BLL.pdb
-D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\bin\DAL.pdb
-D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\bin\DAL.dll.config
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\bin\EntityFramework.xml
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\bin\EntityFramework.SqlServer.xml
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\bin\Newtonsoft.Json.xml
@@ -145,10 +144,11 @@ D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\Paul
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\bin\System.Web.Http.xml
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\bin\System.Web.Http.WebHost.xml
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\bin\DAL.pdb
+D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\bin\DAL.dll.config
+D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\bin\AutoMapper.xml
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\obj\Debug\PaulParkingManagement.csproj.AssemblyReference.cache
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\obj\Debug\PaulParkingManagement.csproj.CoreCompileInputs.cache
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\obj\Debug\PaulParkingManagement.csproj.CopyComplete
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\obj\Debug\PaulParkingManagement.dll
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\obj\Debug\PaulParkingManagement.pdb
-D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\bin\AutoMapper.dll
-D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\PaulParkingManagement\bin\AutoMapper.xml

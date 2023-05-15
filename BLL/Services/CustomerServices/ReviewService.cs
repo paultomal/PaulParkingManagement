@@ -34,5 +34,36 @@ namespace BLL.Services.CustomerServices
             var mapped = mapper.Map<ReviewDTO>(data);
             return mapped;
         }
+        public static ReviewDTO Insert(ReviewDTO review)
+        {
+
+            var cfg = new MapperConfiguration(c =>
+            {
+                c.CreateMap<ReviewDTO, Review>();
+            });
+            var mapper = new Mapper(cfg);
+
+            var reviews = mapper.Map<Review>(review);
+            DataAccessFactory.ReviewData().Create(reviews);
+            return review;
+        }
+        public static ReviewDTO Update(ReviewDTO review)
+        {
+
+            var cfg = new MapperConfiguration(c =>
+            {
+                c.CreateMap<ReviewDTO, Review>();
+            });
+            var mapper = new Mapper(cfg);
+
+            var reviews = mapper.Map<Review>(review);
+            DataAccessFactory.ReviewData().Update(reviews);
+            return review;
+        }
+        public static bool DeleteReview(string id)
+        {
+            var res = DataAccessFactory.ReviewData().Delete(id);
+            return res;
+        }
     }
 }

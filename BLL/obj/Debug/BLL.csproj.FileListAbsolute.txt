@@ -12,15 +12,15 @@ D:\STUDY MATARIALS\DOT NET\Final Project\PaulParkingManagement\BLL\obj\Debug\BLL
 D:\STUDY MATARIALS\DOT NET\Final Project\PaulParkingManagement\BLL\obj\Debug\BLL.pdb
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\BLL\bin\Debug\BLL.dll
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\BLL\bin\Debug\BLL.pdb
+D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\BLL\bin\Debug\AutoMapper.dll
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\BLL\bin\Debug\DAL.dll
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\BLL\bin\Debug\EntityFramework.dll
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\BLL\bin\Debug\DAL.pdb
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\BLL\bin\Debug\DAL.dll.config
+D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\BLL\bin\Debug\AutoMapper.xml
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\BLL\bin\Debug\EntityFramework.xml
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\BLL\obj\Debug\BLL.dll
 D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\BLL\obj\Debug\BLL.pdb
-D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\BLL\bin\Debug\AutoMapper.dll
-D:\STUDY MATARIALS\DOT NET\Final Project\FinalProject\PaulParkingManagement\BLL\bin\Debug\AutoMapper.xml

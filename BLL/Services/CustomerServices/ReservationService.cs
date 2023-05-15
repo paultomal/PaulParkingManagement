@@ -34,5 +34,29 @@ namespace BLL.Services.CustomerServices
             var mapped = mapper.Map<ReservationDTO>(data);
             return mapped;
         }
+        public static ReservationDTO Insert(ReservationDTO reservation)
+        {
+            var cfg = new MapperConfiguration(c =>
+            {
+                c.CreateMap<ReservationDTO, Reservation>();
+                //  c.CreateMap<CustomerDTO, User>();
+            });
+            var mapper = new Mapper(cfg);
+            var reservations = mapper.Map<Reservation>(reservation);
+            DataAccessFactory.ReservationData().Create(reservations);
+            return reservation;
+        }
+        public static ReservationDTO Update(ReservationDTO reservation)
+        {
+            var cfg = new MapperConfiguration(c =>
+            {
+                c.CreateMap<ReservationDTO, Reservation>();
+            });
+            var mapper = new Mapper(cfg);
+            var reservations = mapper.Map<Reservation>(reservation);
+            DataAccessFactory.ReservationData().Update(reservations);
+            return reservation;
+        }
+
     }
 }

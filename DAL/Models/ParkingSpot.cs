@@ -32,8 +32,5 @@ namespace DAL.Models
         {
             Reservations = new List<Reservation>();
         }
-
-
-
     }
 }

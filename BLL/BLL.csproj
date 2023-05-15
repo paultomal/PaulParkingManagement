@@ -59,14 +59,17 @@
     <Compile Include="DTOs\ServiceProviderDTOs\SpotPaymentDTO.cs" />
     <Compile Include="DTOs\ServiceProviderDTOs\SpotReservationDTO.cs" />
     <Compile Include="DTOs\ServiceProviderDTOs\SpotReviewDTO.cs" />
+    <Compile Include="DTOs\TokenDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AdminServices\Class1.cs" />
+    <Compile Include="Services\CustomerServices\AuthService.cs" />
     <Compile Include="Services\CustomerServices\CustomerService.cs" />
     <Compile Include="Services\CustomerServices\PaymentService.cs" />
     <Compile Include="Services\CustomerServices\ReservationService.cs" />
     <Compile Include="Services\CustomerServices\ReviewService.cs" />
     <Compile Include="Services\ServiceProviderServices\Class1.cs" />
     <Compile Include="Services\ServiceProviderServices\ParkingSpotsService.cs" />
+    <Compile Include="Services\TokenServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

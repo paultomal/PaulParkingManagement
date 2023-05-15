@@ -17,7 +17,6 @@ namespace DAL
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<Review> Reviews { get; set; }
         public DbSet<ServiceProvider> ServiceProviders { get; set; }
-        
-/*        public DbSet<Token> Tokens { get; set; }
-*/    }
+        public DbSet<Token> Tokens { get; set; }
+   }
 }

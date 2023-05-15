@@ -18,7 +18,7 @@
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method
             //  to avoid creating duplicate seed data.
-            for (int i = 1; i <= 5; i++)
+           /* for (int i = 1; i <= 5; i++)
             {
                 context.Admins.AddOrUpdate(new Models.Admin
                 {
@@ -51,7 +51,7 @@
                     Phone = Guid.NewGuid().ToString().Substring(0, 12),
                     Password = Guid.NewGuid().ToString().Substring(0, 4)
                 });
-            }
+            }*/
         }
     }
 }

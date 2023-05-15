@@ -28,11 +28,36 @@ namespace BLL.Services.CustomerServices
             var data = DataAccessFactory.PaymentData().Read(id);
             var cfg = new MapperConfiguration(c =>
             {
-                c.CreateMap<Customer, PaymentDTO>();
+                c.CreateMap<Payment, PaymentDTO>();
             });
             var mapper = new Mapper(cfg);
             var mapped = mapper.Map<PaymentDTO>(data);
             return mapped;
+        }
+        public static PaymentDTO Insert(PaymentDTO payment)
+        {
+            var cfg = new MapperConfiguration(c =>
+            {
+                c.CreateMap<PaymentDTO, Payment>();
+                //  c.CreateMap<CustomerDTO, User>();
+            });
+            var mapper = new Mapper(cfg);
+            var payments = mapper.Map<Payment>(payment );
+            DataAccessFactory.PaymentData().Create(payments);
+            return payment;
+        }
+
+        public static PaymentDTO Update(PaymentDTO payment)
+        {
+            var cfg = new MapperConfiguration(c =>
+            {
+                c.CreateMap<PaymentDTO, Payment>();
+                //  c.CreateMap<CustomerDTO, User>();
+            });
+            var mapper = new Mapper(cfg);
+            var payments = mapper.Map<Payment>(payment);
+            DataAccessFactory.PaymentData().Update(payments);
+            return payment;
         }
     }
 }

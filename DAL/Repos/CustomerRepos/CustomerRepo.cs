@@ -8,8 +8,16 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos.CustomerRepos
 {
-    internal class CustomerRepo : Repo, IRepo<Customer, string, Customer>
+    internal class CustomerRepo : Repo, IRepo<Customer, string, Customer>, IAuth<bool>
     {
+        public bool Authenticate(string username, string password)
+        {
+            var data = db.Customers.FirstOrDefault(u => u.CustomerID.Equals(username) &&
+            u.Password.Equals(password));
+            if (data != null) return true;
+            return false;
+        }
+
         public Customer Create(Customer obj)
         {
             db.Customers.Add(obj);
