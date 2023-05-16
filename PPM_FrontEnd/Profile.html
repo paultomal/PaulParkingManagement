@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* CSS for header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5;
+}
+
+.header .logo {
+  font-size: 25px;
+  font-family: 'Sriracha', cursive;
+  color: #000;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+.header .logo img{
+  width: 130px;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 20px;
+  font-weight: 500;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: #184738;
+  padding: 35px 20px;
+}
+.nav-items a:hover{
+    background-color: #237e61;
+    color: #f5f5f5;
+    
+}
+
+/* CSS for main element */
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 620px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("Images/bakground.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.intro h1 {
+  font-family: sans-serif;
+  font-size: 60px;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+.intro h3 {
+  font-family: sans-serif;
+  font-size: 35px;
+  color: #cbf3e7;
+  font-weight: bold;
+  margin: 0;
+}
+
+.intro p {
+  font-size: 20px;
+  color: #e0f5ee;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+.intro button {
+  background-color: #309273;
+  color: #f5f5f5;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  opacity:0.9;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
+}
+
+.intro button:hover {
+ opacity:1;
+}
+
+/* CSS for footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #30433e;
+  padding: 40px 80px;
+}
+
+.footer .copy {
+  color: #fff;
+}
+
+.bottom-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.bottom-links .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.bottom-links .links span {
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+.bottom-links .links a {
+  text-decoration: none;
+  color: #96aead;
+  padding: 10px 20px;
+}
+    </style>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+    var app = angular.module("app", []);
+    app.factory('interceptor', ['$q', '$window', function ($q, $window) {
+        var interceptor = {
+            request: function (config) {
+                config.headers.Authorization = localStorage.getItem("TokenKey");
+                return config;
+            },
+            response: function (response) {
+                return response;
+            },
+            responseError: function (rejection) {
+                if (rejection.status === 401) {
+                    $window.alert("Authorization denied");
+                    var loc = 'D:/STUDY MATARIALS/DOT NET/Final Project/FinalProject/PaulParkingManagement/PPM_FrontEnd/';
+                    window.location.href = loc + 'Login.html';
+                }
+                return $q.reject(rejection);
+            }
+        };
+        return interceptor;
+    }]);
+
+    app.config(['$httpProvider', function ($httpProvider) {
+        $httpProvider.interceptors.push('interceptor');
+    }]);
+
+    app.controller('CustomerCtrl', function ($scope, $window, $http) {
+        $http({
+            method: 'GET',
+            url: "https://localhost:44332/api/customers/"+localStorage.getItem('Username'),
+            headers: {
+                'Authorization': localStorage.getItem("TokenKey")
+            }
+        }).then(function (resp) {
+            $scope.CustomerData = resp.data;
+            // console.log(CustomerData);
+
+
+            // var e = allEmployers.find(function (u) {
+            //     return u.User_Id == localStorage.getItem("UserId");
+            // });
+
+            // if (e) {
+            //     $scope.currentEmployer = e;
+            // }
+
+        }, function (err) {
+            $window.alert("Authorization denied");
+            var loc = 'D:/STUDY MATARIALS/DOT NET/Final Project/FinalProject/PaulParkingManagement/PPM_FrontEnd/';
+            window.location.href = loc + 'Login.html';
+        });
+    })
+</script>
+
+<!-- <style>
+    span a:hover {
+        background: #11ca7d;
+    }
+
+    nav a:hover {
+        background: #5c989c;
+        color: white;
+    }
+
+    .dashboard {
+        background: #f8f6f6;
+        margin-top: 0px;
+        width: 300px;
+        height: 95%;
+        position: fixed;
+    }
+
+    .account {
+        color: white;
+        display: flex;
+        justify-content: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        border-bottom: 3px outset white;
+        margin-bottom: 0;
+    }
+
+    nav {
+        margin: 0;
+    }
+
+        nav a {
+            color: rgb(35, 133, 76);
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            margin: 0;
+        }
+</style> -->
+<body>
+    <header>
+        <div class="bg-black p-3 d-flex justify-content-between align-items-center">
+            <a href="Index.html" class="h1 text-light text-decoration-none">Paul <span class="text-secondary">Parking Management</span></a>
+            <div>
+                <a href="Login.html" class="h3 text-light text-decoration-none text-center m-3 p-2">Logout</a>
+            </div>
+        </div>
+    </header>
+    <div class="dashboard">
+        <nav>
+            <a style="text-decoration: none;" href="Dashboard.html">Dashboard</a>
+            <a style="text-decoration: none;" href="Profile.html">Profile</a>
+            <a style="text-decoration: none;" href="ParkingSpot.html">Parking Spot</a>
+            <a style="text-decoration: none;" href="Reservation.html">Reservations</a>
+            <a style="text-decoration: none;" href="Login.html">Logout</a>
+        </nav>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <div class="">
+        <h1>Students List</h1>
+        <div class="row p-3"  ng-controller="CustomerCtrl">
+            <div class="h1">
+                Hello <span>{{CustomerData.Name}}</span>
+            </div>
+        </div>
+        <table border="1">
+          <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Department</th>
+          </tr>
+          <tr ng-repeat="s in students">
+            <td>{{s.Id}}</td>
+            <td>{{s.Name}}</td>
+            <td>{{s.DepartmentName}}</td>
+          </tr>
+        </table>
+    </div>
+</body>
+</html>

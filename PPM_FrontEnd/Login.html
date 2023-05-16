@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+		<link rel="stylesheet" href="login.css">
+	<style>
+		body {
+			margin: 0;
+			box-sizing: border-box;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		  }
+	  
+		  /* CSS for header */
+		  .header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: #f5f5f5;
+		  }
+	  
+		  .header .logo {
+			font-size: 25px;
+			font-family: 'Sriracha', cursive;
+			color: #000;
+			text-decoration: none;
+			margin-left: 30px;
+		  }
+	  
+		  .header .logo img{
+			width: 130px;
+		  }
+	  
+		  .nav-items {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			margin-right: 20px;
+			font-weight: 500;
+		  }
+	  
+		  .nav-items a {
+			text-decoration: none;
+			color: #184738;
+			padding: 35px 20px;
+		  }
+		  .nav-items a:hover{
+			  background-color: #237e61;
+			  color: #f5f5f5;
+			  
+		  }
+	  
+		  /* CSS for main element */
+		  .intro {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 620px;
+			background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("Images/bakground.jpg");
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		  }
+	  
+		  .intro h1 {
+			font-family: sans-serif;
+			font-size: 60px;
+			color: #ffffff;
+			font-weight: bold;
+			text-transform: uppercase;
+			margin: 0;
+		  }
+		  .intro h3 {
+			font-family: sans-serif;
+			font-size: 35px;
+			color: #cbf3e7;
+			font-weight: bold;
+			margin: 0;
+		  }
+	  
+		  .intro p {
+			font-size: 20px;
+			color: #e0f5ee;
+			text-transform: uppercase;
+			margin: 20px 0;
+		  }
+	  
+		  .intro button {
+			background-color: #309273;
+			color: #f5f5f5;
+			padding: 10px 25px;
+			border: none;
+			border-radius: 5px;
+			font-size: 20px;
+			font-weight: bold;
+			opacity:0.9;
+			cursor: pointer;
+			box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
+		  }
+	  
+		  .intro button:hover {
+		   opacity:1;
+		 }
+	  
+		  /* CSS for footer */
+		  .footer {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: #30433e;
+			padding: 40px 80px;
+		  }
+	  
+		  .footer .copy {
+			color: #fff;
+		  }
+	  
+		  .bottom-links {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			padding: 40px 0;
+		  }
+	  
+		  .bottom-links .links {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 0 40px;
+		  }
+	  
+		  .bottom-links .links span {
+			font-size: 20px;
+			color: #fff;
+			text-transform: uppercase;
+			margin: 10px 0;
+		  }
+	  
+		  .bottom-links .links a {
+			text-decoration: none;
+			color: #96aead;
+			padding: 10px 20px;
+		  }
+	  
+		  
+		</style>
+
+	</head>
+	 <div class="navbar">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script>
+		var Path = 'D:/STUDY MATARIALS/DOT NET/Final Project/FinalProject/PaulParkingManagement/PPM_FrontEnd/';
+		var app = angular.module("app", []);
+
+        app.factory('interceptor', [function () {
+            var interceptor = {
+				request: function (config) {
+					config.headers.Authorization = localStorage.getItem("TokenKey")
+                    return config;
+                },
+                response: function (response) {
+                    return response;
+                }
+            };
+            return interceptor;
+        }]);
+        app.config(function ($httpProvider) {
+            $httpProvider.interceptors.push('interceptor');
+		});
+
+        app.controller('loginCtrl', function ($scope, $http, $window, $location) {
+			$scope.login = function () {
+				var v = $scope.l;
+				console.log(v)
+				$http.post("https://localhost:44332/api/login", v).then(function (resp) {
+					console.log(resp)
+					var Token = resp.data.TKey;
+					var Username = resp.data.CustomerId;
+					localStorage.setItem("Tokenkey", Token);
+					localStorage.setItem("Username", Username);
+					$window.alert("Hello!" );
+					window.location.href = Path + 'Dashboard.html';
+				},
+				function (err) {
+					$window.alert("Login failed! Email or Password Invalid");});
+				};
+			});
+
+                   
+				// },
+				// 	function (err) {
+				// 		$window.alert("Login failed! Email or Password Invalid");
+				// 	});
+		
+
+	</script>
+	<body ng-app="app">
+		
+		<header class="header">
+			<nav class="nav-items">
+			<a href="Index.html">Home</a>
+			<a href="#">About us</a>
+			<a href="#">Terms & conditions</a>
+			<a href="#">Our Service</a>
+			<a href="#">Contact</a>
+			<a href="login.html">Login/SignUp</a>
+			</nav>
+		</header>
+
+ <a href="Registration.html">SignUp</a>
+
+
+
+
+</div>
+		<div class="container py-5 h-50" ng-controller="loginCtrl">
+			<div class="row justify-content-center align-items-center h-100">
+				<div class="col-12 col-lg-9 col-xl-7">
+					<div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+						<div class="card-body p-4 p-md-5">
+							<div class="row">
+								<h4 class="col-md-8 mb-4 pb-2 pb-md-0 mb-md-5">Login Form</h4>
+							</div>
+							<form>
+								<div class="row">
+									<div class="mb-4">
+										<div class="form-outline">
+											<label class="form-label" for="">Username</label>
+											<input Role="text" id="" ng-model="l.Username" class="form-control form-control-lg" placeholder="Enter Your Email" />
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class=" mb-4">
+										<div class="form-outline">
+											<label class="form-label" for="">Password</label>
+											<input type="password" Role="password" id="" ng-model="l.Password" class="form-control form-control-lg" placeholder="Enter Your Password"/>
+										</div>
+									</div>
+								</div>
+								<div class="mt-4 pt-2">
+									<input class="btn btn-success" ng-click="login()" Role="submit" value="Submit" />
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>

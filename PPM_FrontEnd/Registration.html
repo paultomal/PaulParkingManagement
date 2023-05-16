@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome icones CDN Link -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Sign Up</title>
+    <!-- Linking css code file -->
+    <style>
+    
+        body{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-size: cover;
+            background-attachment: fixed;
+
+        }
+        .container{
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            max-width: 950px;
+            height: 750px;
+            margin-top: 90px;
+            display: flex;
+        }   
+        .section1{
+            width: 40%;
+            padding-left: 50px;
+        }
+        .section2{
+            width: 70%;  
+        }
+        .section2 > img{
+            width: 100%;
+            height: 100%;
+            margin: 10px 0px 0px 8px;
+        }
+        h5{
+            margin-top: -12px;
+        }
+        label{
+            text-transform: uppercase;
+            font-size: 12px;
+            color: rgb(48, 48, 48);
+        }
+        input{
+            border: none;
+            width: 100%;
+            border-bottom: 1px solid lightgray;
+            background-color: #FBFBFB;
+            position: relative;
+            top: -10px;
+            padding: 5px;
+        }
+        input:focus {
+            outline: none !important;
+            border-bottom: 1px solid #21905e;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        #password:focus{
+            color: #21905e;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        #btn{
+            border: none;
+            background-color: #21905e;
+            border-radius: 20px;
+            padding: 10px;
+            color: white;
+            width: 120px;
+            margin-top: 15px;
+        }
+        p{
+            font-size: small;
+        }
+        .line{
+            border-bottom: 1px solid lightgray;
+            width: 100%;
+            margin-top: 50px;
+        }
+        .socialIcons{
+            display: flex;
+            margin-top: 5px;
+        }
+        .icon{
+            margin: 10px 7px;
+            position: relative;
+            left: 30px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border: 2px solid black;
+            font-size: 12px;
+            line-height: 25px;
+        }
+        
+        h6{
+            position:relative;
+            top: -8px;
+            font-size: 12px;
+        }
+        .icon:hover, #btn:hover{
+            box-shadow: 0 0 25px rgba(8, 8, 8, 0.2);
+            background-color: #24d384;
+        }
+        a:link, a:visited {
+            color: #21905e;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: medium;
+        }
+
+        a:hover, a:active {
+            font-weight: 700;
+        }
+        .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f5f5f5;
+    }
+
+    .header .logo {
+      font-size: 25px;
+      font-family: 'Sriracha', cursive;
+      color: #000;
+      text-decoration: none;
+      margin-left: 30px;
+    }
+
+    .header .logo img{
+      width: 130px;
+    }
+
+    .nav-items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-right: 20px;
+      font-weight: 500;
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      color: #184738;
+      padding: 35px 20px;
+    }
+    .nav-items a:hover{
+        background-color: #237e61;
+        color: #f5f5f5;
+        
+    }
+
+    /* CSS for main element */
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 620px;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("Images/bakground.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .intro h1 {
+      font-family: sans-serif;
+      font-size: 60px;
+      color: #ffffff;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .intro h3 {
+      font-family: sans-serif;
+      font-size: 35px;
+      color: #cbf3e7;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .intro p {
+      font-size: 20px;
+      color: #e0f5ee;
+      text-transform: uppercase;
+      margin: 20px 0;
+    }
+
+    .intro button {
+      background-color: #309273;
+      color: #f5f5f5;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      font-weight: bold;
+      opacity:0.9;
+      cursor: pointer;
+      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
+    }
+
+    .intro button:hover {
+     opacity:1;
+   }
+
+    /* CSS for footer */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #30433e;
+      padding: 40px 80px;
+    }
+
+    .footer .copy {
+      color: #fff;
+    }
+
+    .bottom-links {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    .bottom-links .links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .bottom-links .links span {
+      font-size: 20px;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .bottom-links .links a {
+      text-decoration: none;
+      color: #96aead;
+      padding: 10px 20px;
+    }
+
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    
+</head>
+<header class="header">
+    <nav class="nav-items">
+    <a href="Index.html">Home</a>
+    <a href="#">About us</a>
+    <a href="#">Terms & conditions</a>
+    <a href="#">Our Service</a>
+    <a href="#">Contact</a>
+    <a href="login.html">Login/SignUp</a>
+    </nav>
+</header>
+<body ng-app="my-app">
+    <div class="container">
+        <div class="section1" ng-controller="SignupCtrl">
+            <h1>Sign up</h1>
+            <form ng-submit="Signup()">
+                <div class="formGroup">
+                    <p><label>ID</label></p>
+                    <input type="text" ng-model="s.CustomerId" required >
+                </div>
+                <div class="formGroup">
+                    <p><label>Name</label></p>
+                    <input type="text" ng-model="s.Name" required >
+                </div>
+                <div class="formGroup">
+                    <p><label >Email</label></p>
+                    <input type="email" ng-model="s.Email" required >
+                </div>
+                
+                <div class="formGroup">
+                    <p><label>Phone no</label></p>
+                    <input type="number" ng-model="s.Phone" required >
+                </div >
+                <div class="formGroup">
+                    <p><label>Password</label></p>
+                    <input type="password" id="password" ng-model="s.Password" required >
+                </div >
+                <input type="submit" id="btn" value="SignUp">
+                <p> <a href="login.html">back</a></p>
+            </form>           
+        </div>
+        
+    </div>
+</body>
+
+<script>
+    var app = angular.module("my-app",[]);
+
+    app.controller('SignupCtrl', function($scope,$http){
+        $scope.Signup=function(){
+            var v = $scope.s;
+            $http.post("https://localhost:44332/api/customers/add",v).then(function(resp){
+                alert("Successfully Done your Signup");
+                window.location.href = "login.html";
+            },function(err){
+                alert("SignUp Failed!");
+            });
+        };
+    });
+</script>
+
+</html>

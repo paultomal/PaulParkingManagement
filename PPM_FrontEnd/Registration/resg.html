@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="registrationApp">
+<head>
+  <title>Registration Form</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body>
+  <div ng-controller="RegistrationController">
+    <h1>Registration Form</h1>
+    <form ng-submit="register()">
+      <input type="text" ng-model="user.name" placeholder="Name" required>
+      <input type="email" ng-model="user.email" placeholder="Email" required>
+      <input type="password" ng-model="user.password" placeholder="Password" required>
+      <input type="tel" ng-model="user.phone" placeholder="Phone" required>
+      <button type="submit">Register</button>
+    </form>
+    <p ng-show="registrationSuccess">Registration successful!</p>
+    <p ng-show="registrationError">{{ registrationError }}</p>
+  </div>
+</body>
+</html>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  form {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  input {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 5px;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  p {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #4CAF50;
+    display: none;
+  }
+  
+</style>
